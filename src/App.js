@@ -19,7 +19,7 @@ function App() {
 
   const getAllCities = () => {
     setLoading(true);
-    fetch("/cities.json")
+    fetch(process.env.PUBLIC_URL + "/static/cities.json")
       .then((r) => r.json())
       .then((cities) => {
         setAllCities(cities);
@@ -129,7 +129,9 @@ function App() {
             zoom={20}
             center={[19.1343786, 51.9189046]}
           >
-            <Geographies geography={"/gadm36_POL_1.json"}>
+            <Geographies
+              geography={process.env.PUBLIC_URL + "/static/gadm36_POL_1.json"}
+            >
               {({ geographies }) =>
                 geographies.map((geo) => (
                   <Geography key={geo.rsmKey} geography={geo} fill={"#ddd"} />
