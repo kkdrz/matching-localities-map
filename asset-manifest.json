@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/matching-cities-map/static/css/main.be30be12.chunk.css",
-    "main.js": "/matching-cities-map/static/js/main.1488f093.chunk.js",
-    "main.js.map": "/matching-cities-map/static/js/main.1488f093.chunk.js.map",
+    "main.js": "/matching-cities-map/static/js/main.c85f65a0.chunk.js",
+    "main.js.map": "/matching-cities-map/static/js/main.c85f65a0.chunk.js.map",
     "runtime-main.js": "/matching-cities-map/static/js/runtime-main.a5095d1c.js",
     "runtime-main.js.map": "/matching-cities-map/static/js/runtime-main.a5095d1c.js.map",
     "static/js/2.dba06c2a.chunk.js": "/matching-cities-map/static/js/2.dba06c2a.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.a5095d1c.js",
     "static/js/2.dba06c2a.chunk.js",
     "static/css/main.be30be12.chunk.css",
-    "static/js/main.1488f093.chunk.js"
+    "static/js/main.c85f65a0.chunk.js"
   ]
 }
