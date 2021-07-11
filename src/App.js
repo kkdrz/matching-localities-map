@@ -86,7 +86,7 @@ function App() {
         </label>
       </div>
 
-      <div className="flex-col" style={{textAlign: "center", height: "50px" }}>
+      <div className="flex-col" style={{textAlign: "center"}}>
         <div hidden={!loading}>
           <h3>Ładowanie...</h3>
         </div>
