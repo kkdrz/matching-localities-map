@@ -1,8 +1,8 @@
 {
-  "name": "matching-cities-map",
+  "name": "matching-localities-map",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kdrozd.pl/matching-cities-map/",
+  "homepage": "https://kdrozd.pl/matching-localities-map/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",

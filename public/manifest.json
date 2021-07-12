@@ -1,6 +1,6 @@
 {
-  "short_name": "Matching cities map",
-  "name": "Simple app marking places that match a pattern on a map (Poland only)",
+  "short_name": "Matching localities map",
+  "name": "Simple app marking localities that match a pattern on a map (Poland only)",
   "icons": [
     {
       "src": "favicon.ico",

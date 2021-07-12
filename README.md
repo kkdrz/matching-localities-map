@@ -1,10 +1,16 @@
-# Simple app marking places that match a pattern on a map (Poland only)
+# Simple app marking localities that match a pattern on a map (Poland only)
 
-The places data comes from the [PRNG](https://www.geoportal.gov.pl/dane/panstwowy-rejestr-nazw-geograficznych).
+Details about the app can be found in my blog post: [kdrozd.pl/map-of-localities-matching-the-pattern](https://kdrozd.pl/map-of-localities-matching-the-pattern/)
 
-The map model (shapefile) comes from [GADM](https://gadm.org/download_country_v3.html)
+The application is available at: [kdrozd.pl/matching-localities-map/](https://kdrozd.pl/matching-localities-map/)
 
-[react-simple-map](https://github.com/zcreativelabs/react-simple-maps) library was used to render the map.
+## Libraries and data used
+
+The localities data comes from the [National Register of Geographical Names](https://www.geoportal.gov.pl/dane/panstwowy-rejestr-nazw-geograficznych).
+
+The map model (shapefile) comes from [GADM](https://gadm.org/download_country_v3.html).
+
+[zcreativelabs/react-simple-maps](https://github.com/zcreativelabs/react-simple-maps) library was used to render the map.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
