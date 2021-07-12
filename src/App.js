@@ -15,6 +15,7 @@ function App() {
   const [regex, setRegex] = useState(false);
   const [fragment, setFragment] = useState("");
   const [loading, setLoading] = useState(false);
+  const [clickedCity, setClickedCity] = useState("");
 
   const getAllCities = () => {
     setLoading(true);
@@ -65,18 +66,18 @@ function App() {
 
   return (
     <div className="flex-col">
-      <div className="flex-row" style={{padding:"10px"}}>
+      <div className="flex-row" style={{ padding: "10px" }}>
         <label>
           Wzorzec:
           <input
-            style={{marginLeft: "5px"}}
+            style={{ marginLeft: "5px" }}
             type="text"
             minLength={2}
             value={fragment}
             onChange={(e) => setFragment(e.target.value.toLowerCase())}
           />
         </label>
-        <label style={{marginLeft: "10px"}}>
+        <label style={{ marginLeft: "10px" }}>
           <input
             type="checkbox"
             value={regex}
@@ -84,9 +85,11 @@ function App() {
           ></input>
           Regex
         </label>
+        <span hidden={!!clickedCity} style={{marginLeft: "auto"}}><i>Kliknij na kropkę, aby sprawdzić nazwę</i></span>
+        <span hidden={!clickedCity} style={{marginLeft: "auto"}}>{clickedCity}</span>
       </div>
 
-      <div className="flex-col" style={{textAlign: "center"}}>
+      <div className="flex-col" style={{ textAlign: "center" }}>
         <div hidden={!loading}>
           <h3>Ładowanie...</h3>
         </div>
@@ -103,9 +106,7 @@ function App() {
           </h3>
         </div>
 
-        <div
-          hidden={loading || !isValidFragment(fragment)}
-        >
+        <div hidden={loading || !isValidFragment(fragment)}>
           <h3>
             {fragment} {regex ? "(regex)" : ""}
           </h3>
@@ -139,7 +140,7 @@ function App() {
             {matchingCities.length < MAX_NUMBER_OF_MATCHING_CITIES &&
               matchingCities.map((city, i) => (
                 <Marker key={i} coordinates={[city.Y, city.X]} fill="#777">
-                  <circle r={0.1} fill="#F53" />
+                  <circle className="marker" r={0.1} fill="#F53" onClick={() => setClickedCity(city.name)} />
                 </Marker>
               ))}
           </ZoomableGroup>

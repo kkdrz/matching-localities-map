@@ -39,3 +39,7 @@ html, body, #root {
 .flex-grow {
   flex-grow: 1;
 }
+
+.marker:hover {
+  fill: blue;
+}
