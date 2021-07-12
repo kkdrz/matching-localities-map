@@ -85,8 +85,22 @@ function App() {
           ></input>
           Regex
         </label>
-        <span hidden={!!clickedCity} style={{marginLeft: "auto"}}><i>Kliknij na kropkę, aby sprawdzić nazwę</i></span>
-        <span hidden={!clickedCity} style={{marginLeft: "auto"}}>{clickedCity}</span>
+
+        <div
+          className="flex-col"
+          hidden={!clickedCity}
+          style={{ marginLeft: "auto", textAlign: "right" }}
+        >
+          <span>{clickedCity.name}</span>
+          <span style={{ fontSize: "small" }}>
+            <i>
+              {clickedCity.X} {clickedCity.Y}
+            </i>
+          </span>
+        </div>
+        <span hidden={!!clickedCity} style={{ marginLeft: "auto" }}>
+          <i>Kliknij na kropkę, aby sprawdzić nazwę</i>
+        </span>
       </div>
 
       <div className="flex-col" style={{ textAlign: "center" }}>
@@ -140,7 +154,12 @@ function App() {
             {matchingCities.length < MAX_NUMBER_OF_MATCHING_CITIES &&
               matchingCities.map((city, i) => (
                 <Marker key={i} coordinates={[city.Y, city.X]} fill="#777">
-                  <circle className="marker" r={0.1} fill="#F53" onClick={() => setClickedCity(city.name)} />
+                  <circle
+                    className="marker"
+                    r={0.1}
+                    fill="#F53"
+                    onClick={() => setClickedCity(city)}
+                  />
                 </Marker>
               ))}
           </ZoomableGroup>
