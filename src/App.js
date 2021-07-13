@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ReactGA from 'react-ga'
 import "./App.css";
 import {
   ComposableMap,
@@ -48,6 +49,12 @@ function App() {
         filter = (city) => expression.test(city.name.toLowerCase());
       }
 
+      ReactGA.event({
+        category: 'Search',
+        action: 'Pattern entered',
+        value: fragment
+      });
+
       let filtered = allCities.filter(filter);
       console.log("Found " + filtered.length + " places");
       setLoading(false);
@@ -59,6 +66,10 @@ function App() {
       clearTimeout(timeoutId);
     };
   }, [allCities, fragment, regex]);
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search)
+  }, [])
 
   function isValidFragment(fragment) {
     return !!fragment && fragment.length > 1;

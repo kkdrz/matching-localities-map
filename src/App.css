@@ -43,3 +43,36 @@ html, body, #root {
 .marker:hover {
   fill: blue;
 }
+
+.modal {
+  background-color: white;
+  position: fixed;
+  top:50%;
+  left:50%;
+  border: 1px solid black;
+  transform: translate(-50%,-50%);
+  transition-duration: 1s;
+}
+
+.modal-inner {
+  padding: 5px 15px 5px 15px;
+  text-align: center;
+}
+
+.modal-button {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+  padding: 6px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.modal-button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
