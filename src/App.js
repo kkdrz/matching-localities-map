@@ -52,7 +52,7 @@ function App() {
       ReactGA.event({
         category: 'Search',
         action: 'Pattern entered',
-        value: fragment
+        label: fragment
       });
 
       let filtered = allCities.filter(filter);
