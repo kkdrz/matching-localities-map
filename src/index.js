@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import Modal from "./Modal";
 import ReactGA from "react-ga";
 
-ReactGA.initialize('UA-184638286-1');
+ReactGA.initialize('G-ZXMPLSG5ND');
 
 ReactDOM.render(
   <React.StrictMode>
